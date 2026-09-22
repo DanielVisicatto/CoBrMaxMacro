@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoBrMaxMacro.Application\CoBrMaxMacro.Application.csproj" />
+    <ProjectReference Include="..\CoBrMaxMacro.Domain\CoBrMaxMacro.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,108 @@
+﻿<Window x:Class="CoBrMaxMacro.Presentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:CoBrMaxMacro.Presentation.Controls"
+        mc:Ignorable="d"
+
+        Title="Cabal Max Macro"
+        Width="1000"
+        Height="650"
+
+        Icon="/Assets/icon.png"
+
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <!-- Moldura externa cromada -->
+    <Border
+        Margin="8"
+        Padding="2"
+        CornerRadius="16"
+        Background="{DynamicResource ChromeFrameBrush}">
+
+        <Border.Effect>
+            <DropShadowEffect
+                BlurRadius="28"
+                ShadowDepth="0"
+                Opacity="0.30"/>
+        </Border.Effect>
+
+        <!-- Corpo interno da aplicação -->
+        <Border
+    CornerRadius="14"
+    Background="{DynamicResource WindowBackgroundBrush}"
+    BorderBrush="{DynamicResource ChromeInnerBorderBrush}"
+    BorderThickness="1">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- ========================================= -->
+                <!-- TitleBar                                  -->
+                <!-- ========================================= -->
+
+                <Border
+            Grid.Row="0"
+            Background="{DynamicResource WindowBackgroundBrush}"
+            CornerRadius="13,13,0,0">
+
+                    <controls:TitleBar/>
+
+                </Border>
+
+
+                <!-- ========================================= -->
+                <!-- Área principal                           -->
+                <!-- ========================================= -->
+
+                <Border
+            Grid.Row="1"
+            CornerRadius="0,0,13,13"
+            ClipToBounds="True">
+
+                    <Grid>
+
+                        <!-- Imagem -->
+                        <Grid.Background>
+                            <ImageBrush
+                        ImageSource="/CoBrMaxMacro.Presentation;component/Assets/Backgrounds/main-background.png"
+                        Stretch="UniformToFill"
+                        AlignmentX="Center"
+                        AlignmentY="Center"/>
+                        </Grid.Background>
+
+
+                        <!-- Overlay -->
+                        <Border
+                    Background="{DynamicResource BackgroundOverlayBrush}"/>
+
+
+                        <!-- Conteúdo da aplicação -->
+                        <Grid>
+
+                            <!--
+                        Aqui entram nossos menus,
+                        seleção de personagem,
+                        skills etc.
+                    -->
+
+                        </Grid>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+        </Border>
+
+    </Border>
+
+</Window>

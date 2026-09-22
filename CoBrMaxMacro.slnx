@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/1-Presentation/">
+    <Project Path="CoBrMaxMacro.Presentation/CoBrMaxMacro.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/2-Application/">
+    <Project Path="CoBrMaxMacro.Application/CoBrMaxMacro.Application.csproj" />
+  </Folder>
+  <Folder Name="/3-Domain/">
+    <Project Path="CoBrMaxMacro.Domain/CoBrMaxMacro.Domain.csproj" Id="5df7d166-2b9c-40c4-af82-262a7b16f1b8" />
+  </Folder>
+  <Folder Name="/4-Infrastructure/">
+    <Project Path="CoBrMaxMacro.Infrastructure/CoBrMaxMacro.Infrastructure.csproj" Id="e0cd2c37-01aa-4ed3-9453-6fc30a44250d" />
+  </Folder>
+</Solution>
