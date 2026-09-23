@@ -10,4 +10,8 @@
     <ProjectReference Include="..\CoBrMaxMacro.Domain\CoBrMaxMacro.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CharacterSelection\Commands\v1\" />
+  </ItemGroup>
+
 </Project>
