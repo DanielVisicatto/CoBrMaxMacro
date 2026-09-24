@@ -1,27 +1,29 @@
-﻿using CoBrMaxMacro.Presentation.Themes;
+﻿using CoBrMaxMacro.Presentation.Themes.Enums;
+using CoBrMaxMacro.Presentation.Themes.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.ComponentModel;
+using System.Windows.Media;
 
 namespace CoBrMaxMacro.Presentation.Controls;
 
 public partial class TitleBar : UserControl
 {
-    private readonly ThemeService _themeService = new();
+    private ThemeService ThemeService =>
+        App.Services.GetRequiredService<ThemeService>();
 
     public TitleBar()
     {
         InitializeComponent();
     }
 
-    private Window? ParentWindow =>
-        Window.GetWindow(this);
+    private Window? ParentWindow => Window.GetWindow(this);
 
     private void TitleBar_MouseLeftButtonDown(
-    object sender,
-    MouseButtonEventArgs e
-)
+        object sender,
+        MouseButtonEventArgs e)
     {
         if (e.OriginalSource is DependencyObject source)
         {
@@ -43,34 +45,20 @@ public partial class TitleBar : UserControl
         object sender,
         RoutedEventArgs e
     ) => ParentWindow?.WindowState = WindowState.Minimized;
-    
 
     private void MaximizeButton_Click(
         object sender,
         RoutedEventArgs e
     ) => ToggleMaximize();
-    
 
     private void CloseButton_Click(
         object sender,
         RoutedEventArgs e
-    ) => ParentWindow?.Close();    
-
-    private void ToggleMaximize()
-    {
-        if (ParentWindow is null)
-            return;
-
-        ParentWindow.WindowState =
-            ParentWindow.WindowState == WindowState.Maximized
-                ? WindowState.Normal
-                : WindowState.Maximized;
-    }
+    ) => ParentWindow?.Close();
 
     private void ThemeSelector_SelectionChanged(
-    object sender,
-    SelectionChangedEventArgs selectionEvent
-)
+        object sender,
+        SelectionChangedEventArgs e)
     {
         if (DesignerProperties.GetIsInDesignMode(this))
             return;
@@ -85,12 +73,21 @@ public partial class TitleBar : UserControl
             _ => AppThemeType.System
         };
 
-        _themeService.ApplyTheme(theme);
+        ThemeService.ApplyTheme(theme);
     }
 
-    private static T? FindParent<T>(
-        DependencyObject child
-    )
+    private void ToggleMaximize()
+    {
+        if (ParentWindow is null)
+            return;
+
+        ParentWindow.WindowState =
+            ParentWindow.WindowState == WindowState.Maximized
+                ? WindowState.Normal
+                : WindowState.Maximized;
+    }
+
+    private static T? FindParent<T>(DependencyObject child)
         where T : DependencyObject
     {
         var parent = child;
@@ -100,8 +97,7 @@ public partial class TitleBar : UserControl
             if (parent is T target)
                 return target;
 
-            parent = System.Windows.Media.VisualTreeHelper
-                .GetParent(parent);
+            parent = VisualTreeHelper.GetParent(parent);
         }
 
         return null;

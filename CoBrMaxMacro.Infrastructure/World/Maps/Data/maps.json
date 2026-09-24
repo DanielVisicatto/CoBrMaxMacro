@@ -1,0 +1,80 @@
+﻿[
+  {
+    "id": "bloody-ice",
+    "name": "Tundra Infame",
+    "minimumLevel": 1,
+    "maximumLevel": null
+  },
+  {
+    "id": "desert-scream",
+    "name": "Deserto da Lamentação",
+    "minimumLevel": 1,
+    "maximumLevel": null
+  },
+  {
+    "id": "green-despair",
+    "name": "Floresta do Desespero",
+    "minimumLevel": 1,
+    "maximumLevel": null
+  },
+  {
+    "id": "port-lux",
+    "name": "Porto Lux",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "fort-ruina",
+    "name": "Forte Ruína",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "undead-ground",
+    "name": "Santuário Profano",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "forgotten-ruin",
+    "name": "Elo Perdido",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "lakeside",
+    "name": "Região dos Lagos",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "mutant-forest",
+    "name": "Floresta Mutante",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "pontus-ferrum",
+    "name": "Pontus Ferrum",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "porta-inferno",
+    "name": "Portal Infernus",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "arcane-trace",
+    "name": "Vestígio Arcano",
+    "minimumLevel": null,
+    "maximumLevel": null
+  },
+  {
+    "id": "senillinea",
+    "name": "Senillinea",
+    "minimumLevel": null,
+    "maximumLevel": null
+  }
+]

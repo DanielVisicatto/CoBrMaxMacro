@@ -1,7 +1,7 @@
 ﻿using CoBrMaxMacro.Domain.Characters.Enums;
-using CoBrMaxMacro.Domain.Characters.ValueObjects.V1;
+using CoBrMaxMacro.Domain.Characters.ValueObjects.v1;
 
-namespace CoBrMaxMacro.Domain.Characters.Entities.V1;
+namespace CoBrMaxMacro.Domain.Characters.Entities.v1;
 
 public sealed class CharacterProfile
 {
