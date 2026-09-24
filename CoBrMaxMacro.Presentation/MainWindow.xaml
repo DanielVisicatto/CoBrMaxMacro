@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:CoBrMaxMacro.Presentation.Controls"
+        xmlns:characterSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.Characters.Selection"
         mc:Ignorable="d"
 
         Title="Cabal Max Macro"
@@ -32,10 +33,10 @@
 
         <!-- Corpo interno da aplicação -->
         <Border
-    CornerRadius="14"
-    Background="{DynamicResource WindowBackgroundBrush}"
-    BorderBrush="{DynamicResource ChromeInnerBorderBrush}"
-    BorderThickness="1">
+            CornerRadius="14"
+            Background="{DynamicResource WindowBackgroundBrush}"
+            BorderBrush="{DynamicResource ChromeInnerBorderBrush}"
+            BorderThickness="1">
 
             <Grid>
 
@@ -49,9 +50,9 @@
                 <!-- ========================================= -->
 
                 <Border
-            Grid.Row="0"
-            Background="{DynamicResource WindowBackgroundBrush}"
-            CornerRadius="13,13,0,0">
+                    Grid.Row="0"
+                    Background="{DynamicResource WindowBackgroundBrush}"
+                    CornerRadius="13,13,0,0">
 
                     <controls:TitleBar/>
 
@@ -63,36 +64,33 @@
                 <!-- ========================================= -->
 
                 <Border
-            Grid.Row="1"
-            CornerRadius="0,0,13,13"
-            ClipToBounds="True">
+                    Grid.Row="1"
+                    CornerRadius="0,0,13,13"
+                    ClipToBounds="True">
 
                     <Grid>
 
                         <!-- Imagem -->
                         <Grid.Background>
                             <ImageBrush
-                        ImageSource="/CoBrMaxMacro.Presentation;component/Assets/Backgrounds/main-background.png"
-                        Stretch="UniformToFill"
-                        AlignmentX="Center"
-                        AlignmentY="Center"/>
+                                ImageSource="/CoBrMaxMacro.Presentation;component/Assets/Backgrounds/main-background.png"
+                                Stretch="UniformToFill"
+                                AlignmentX="Center"
+                                AlignmentY="Center"/>
                         </Grid.Background>
 
 
                         <!-- Overlay -->
                         <Border
-                    Background="{DynamicResource BackgroundOverlayBrush}"/>
+                            Background="{DynamicResource BackgroundOverlayBrush}"/>
 
 
                         <!-- Conteúdo da aplicação -->
                         <Grid>
-
-                            <!--
-                        Aqui entram nossos menus,
-                        seleção de personagem,
-                        skills etc.
-                    -->
-
+                            <characterSelection:CharacterSelectionView
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Margin="32"/>
                         </Grid>
 
                     </Grid>

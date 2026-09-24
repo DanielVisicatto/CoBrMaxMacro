@@ -1,6 +1,6 @@
 ﻿using CoBrMaxMacro.Domain.Characters.ValueObjects.v1;
 
-namespace CoBrMaxMacro.Domain.Characters.ValueObjects.V1;
+namespace CoBrMaxMacro.Domain.Characters.ValueObjects.v1;
 
 public sealed class CharacterProgression
 {

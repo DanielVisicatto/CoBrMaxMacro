@@ -1,15 +1,16 @@
 ﻿<Application x:Class="CoBrMaxMacro.Presentation.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
 
-                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
-                <ResourceDictionary Source="Themes/Controls.xaml"/>
-                <ResourceDictionary Source="Themes/WindowFrame.xaml"/>
+                <ResourceDictionary Source="Themes/Resources/LightTheme.xaml"/>
+                <ResourceDictionary Source="Themes/Controls/TitleBarButtons.xaml"/>
+                <ResourceDictionary Source="Themes/Controls/TitleBarComboBox.xaml"/>
+                <ResourceDictionary Source="Themes/Controls/AppComboBox.xaml"/>
+                <ResourceDictionary Source="Themes/Resources/WindowFrame.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
