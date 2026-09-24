@@ -1,7 +1,9 @@
-﻿using System.Windows;
+﻿using CoBrMaxMacro.Presentation.Themes.Enums;
+using CoBrMaxMacro.Presentation.Themes.Helpers;
+using System.Windows;
 using WpfApplication = System.Windows.Application;
 
-namespace CoBrMaxMacro.Presentation.Themes;
+namespace CoBrMaxMacro.Presentation.Themes.Services;
 
 public sealed class ThemeService
 {
@@ -19,10 +21,10 @@ public sealed class ThemeService
         var themeUri = effectiveTheme switch
         {
             AppThemeType.Light =>
-                "Themes/LightTheme.xaml",
+                "Themes/Resources/LightTheme.xaml",
 
             AppThemeType.Dark =>
-                "Themes/DarkTheme.xaml",
+                "Themes/Resources/DarkTheme.xaml",
 
             _ => throw new ArgumentOutOfRangeException(
                 nameof(theme)

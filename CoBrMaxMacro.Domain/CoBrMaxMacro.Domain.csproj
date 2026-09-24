@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="World\Maps\" />
+    <Folder Include="World\Navigation\" />
+    <Folder Include="World\Spots\" />
+  </ItemGroup>
+
 </Project>

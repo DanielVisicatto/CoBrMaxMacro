@@ -1,14 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CoBrMaxMacro.Application\CoBrMaxMacro.Application.csproj" />
-    <ProjectReference Include="..\CoBrMaxMacro.Domain\CoBrMaxMacro.Domain.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CoBrMaxMacro.Application\CoBrMaxMacro.Application.csproj" />
+		<ProjectReference Include="..\CoBrMaxMacro.Domain\CoBrMaxMacro.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Data\Cabal\v1\maps.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="World\Spots\Data\" />
+		<Folder Include="World\Spots\Repositories\" />
+	</ItemGroup>
 
 </Project>

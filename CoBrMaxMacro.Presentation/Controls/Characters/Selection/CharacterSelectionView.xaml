@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="CoBrMaxMacro.Presentation.Controls.Characters.Selection.CharacterSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="CharacterSelectionView_Loaded">
+
+    <Grid>
+
+        <StackPanel Width="300">
+
+            <TextBlock
+                Text="Character Selection"
+                FontSize="14"
+                FontWeight="SemiBold"
+                Foreground="{DynamicResource PrimaryTextBrush}"
+                Margin="0,0,0,7"/>
+
+            <ComboBox
+                x:Name="CharacterClassSelector"
+                Style="{StaticResource AppComboBoxStyle}"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

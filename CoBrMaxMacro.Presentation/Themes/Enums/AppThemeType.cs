@@ -1,4 +1,4 @@
-﻿namespace CoBrMaxMacro.Presentation.Themes;
+﻿namespace CoBrMaxMacro.Presentation.Themes.Enums;
 
 public enum AppThemeType
 {

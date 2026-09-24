@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace CoBrMaxMacro.Presentation.Themes;
+namespace CoBrMaxMacro.Presentation.Themes.Helpers;
 
 public static class WindowsThemeHelper
 {

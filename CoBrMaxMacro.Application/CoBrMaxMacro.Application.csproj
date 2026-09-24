@@ -10,4 +10,12 @@
     <ProjectReference Include="..\CoBrMaxMacro.Domain\CoBrMaxMacro.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Characters\Selection\Commands\v1\" />
+    <Folder Include="Dungeons\Commands\v1\" />
+    <Folder Include="Dungeons\Models\v1\" />
+    <Folder Include="Dungeons\Queries\v1\" />
+    <Folder Include="World\Navigation\" />
+  </ItemGroup>
+
 </Project>

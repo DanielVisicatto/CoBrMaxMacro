@@ -1,6 +1,6 @@
-﻿using CoBrMaxMacro.Application.Interfaces.Commands;
+﻿using CoBrMaxMacro.Application.Interfaces.Commands.v1;
 
-namespace CoBrMaxMacro.Application.StartAutomation.Commands;
+namespace CoBrMaxMacro.Application.Automation.StartAutomation.Commands;
 
 internal class StartAutomationCommandHandler : ICommandHandler<StartAutomationCommand>
 {

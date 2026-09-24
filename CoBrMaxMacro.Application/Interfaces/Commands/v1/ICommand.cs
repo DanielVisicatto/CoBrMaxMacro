@@ -1,4 +1,4 @@
-﻿namespace CoBrMaxMacro.Application.Interfaces.Commands;
+﻿namespace CoBrMaxMacro.Application.Interfaces.Commands.v1;
 
 public interface ICommand
 {
