@@ -37,6 +37,8 @@ public static class Bootstrapper
                 IReadOnlyCollection<MapModel>>,
             GetMapsQueryHandler>();
 
+        services.AddSingleton<MapSelectionState>();
+
         services.AddSingleton<MainWindow>();
 
         return services;
