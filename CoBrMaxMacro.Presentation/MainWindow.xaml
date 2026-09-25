@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:CoBrMaxMacro.Presentation.Controls"
         xmlns:characterSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.Characters.Selection"
+        xmlns:mapSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.World.Maps"
         mc:Ignorable="d"
 
         Title="Cabal Max Macro"
@@ -86,12 +87,17 @@
 
 
                         <!-- Conteúdo da aplicação -->
-                        <Grid>
-                            <characterSelection:CharacterSelectionView
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Margin="32"/>
-                        </Grid>
+                        <StackPanel
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="32">
+
+                            <characterSelection:CharacterSelectionView />
+
+                            <mapSelection:MapSelectionView
+                                Margin="0,16,0,0"/>
+
+                        </StackPanel>
 
                     </Grid>
 

@@ -1,6 +1,9 @@
 ﻿using CoBrMaxMacro.Application.Characters.Selection.Queries.v1;
 using CoBrMaxMacro.Application.Interfaces.Queries.v1;
 using CoBrMaxMacro.Domain.Characters.Enums;
+using CoBrMaxMacro.Presentation.Characters.Mappers.v1;
+using CoBrMaxMacro.Presentation.Characters.Models.v1;
+using CoBrMaxMacro.Presentation.Helpers.v1;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,11 +28,22 @@ public partial class CharacterSelectionView : UserControl
 
     private async void CharacterSelectionView_Loaded(
         object sender,
-        RoutedEventArgs e)
+        RoutedEventArgs e
+    )
     {
+        if (DesignModeHelper.IsInDesignMode(this))
+            return;
+
         var classes = await GetCharacterClassesHandler.HandleAsync(
             new GetCharacterClassesQuery());
 
-        CharacterClassSelector.ItemsSource = classes;
+        CharacterClassSelector.ItemsSource = classes
+            .Select(characterClass => new CharacterClassItem
+            {
+                Value = characterClass,
+                DisplayName =
+                    CharacterClassDisplayNameMapper.ToDisplayName(characterClass)
+            })
+            .ToList();
     }
 }
