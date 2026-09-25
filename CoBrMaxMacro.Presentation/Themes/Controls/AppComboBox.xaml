@@ -6,23 +6,23 @@
     <!-- ========================================= -->
 
     <Style x:Key="AppComboBoxItemStyle"
-       TargetType="ComboBoxItem">
+           TargetType="ComboBoxItem">
 
         <Setter Property="Height" Value="32"/>
         <Setter Property="Padding" Value="10,0"/>
         <Setter Property="FontSize" Value="14"/>
 
         <Setter Property="Foreground"
-            Value="{DynamicResource PrimaryTextBrush}"/>
+                Value="{DynamicResource PrimaryTextBrush}"/>
 
         <Setter Property="Background"
-            Value="Transparent"/>
+                Value="Transparent"/>
 
         <Setter Property="HorizontalContentAlignment"
-            Value="Stretch"/>
+                Value="Stretch"/>
 
         <Setter Property="VerticalContentAlignment"
-            Value="Center"/>
+                Value="Center"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -30,33 +30,33 @@
                 <ControlTemplate TargetType="ComboBoxItem">
 
                     <Border x:Name="ItemBorder"
-                        Background="{TemplateBinding Background}"
-                        Padding="{TemplateBinding Padding}">
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}">
 
                         <ContentPresenter
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
-                        TextElement.Foreground="{TemplateBinding Foreground}"/>
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            TextElement.Foreground="{TemplateBinding Foreground}"/>
 
                     </Border>
 
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsHighlighted"
-                             Value="True">
+                                 Value="True">
 
                             <Setter TargetName="ItemBorder"
-                                Property="Background"
-                                Value="{DynamicResource ControlHoverBrush}"/>
+                                    Property="Background"
+                                    Value="{DynamicResource ControlHoverBrush}"/>
 
                         </Trigger>
 
                         <Trigger Property="IsSelected"
-                             Value="True">
+                                 Value="True">
 
                             <Setter TargetName="ItemBorder"
-                                Property="Background"
-                                Value="{DynamicResource ControlHoverBrush}"/>
+                                    Property="Background"
+                                    Value="{DynamicResource ControlHoverBrush}"/>
 
                         </Trigger>
 
@@ -75,25 +75,25 @@
     <!-- ========================================= -->
 
     <Style x:Key="AppComboBoxStyle"
-       TargetType="ComboBox">
+           TargetType="ComboBox">
 
         <Setter Property="Height" Value="36"/>
         <Setter Property="FontSize" Value="14"/>
 
         <Setter Property="Foreground"
-            Value="{DynamicResource PrimaryTextBrush}"/>
+                Value="{DynamicResource PrimaryTextBrush}"/>
 
         <Setter Property="Background"
-            Value="{DynamicResource ControlBackgroundBrush}"/>
+                Value="{DynamicResource ControlBackgroundBrush}"/>
 
         <Setter Property="BorderBrush"
-            Value="{DynamicResource ControlBorderBrush}"/>
+                Value="{DynamicResource ControlBorderBrush}"/>
 
         <Setter Property="BorderThickness"
-            Value="1"/>
+                Value="1"/>
 
         <Setter Property="ItemContainerStyle"
-            Value="{StaticResource AppComboBoxItemStyle}"/>
+                Value="{StaticResource AppComboBoxItemStyle}"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -104,10 +104,10 @@
 
                         <!-- Campo principal -->
                         <Border x:Name="MainBorder"
-                            CornerRadius="5"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                                CornerRadius="5"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
 
                             <Grid>
 
@@ -118,21 +118,23 @@
 
                                 <!-- Item selecionado -->
                                 <ContentPresenter
-                                Margin="10,0,4,0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Content="{TemplateBinding SelectionBoxItem}"
-                                ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
-                                TextElement.Foreground="{TemplateBinding Foreground}"/>
+                                    Margin="10,0,4,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                    ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                                    TextElement.Foreground="{TemplateBinding Foreground}"/>
 
                                 <!-- Área clicável / seta -->
                                 <ToggleButton
-                                Grid.ColumnSpan="2"
-                                Background="Transparent"
-                                BorderThickness="0"
-                                Focusable="False"
-                                ClickMode="Press"
-                                IsChecked="{Binding IsDropDownOpen,
+                                    Grid.ColumnSpan="2"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Focusable="False"
+                                    ClickMode="Press"
+                                    IsChecked="{Binding IsDropDownOpen,
                                     RelativeSource={RelativeSource TemplatedParent},
                                     Mode=TwoWay}">
 
@@ -143,11 +145,11 @@
                                             <Grid Background="Transparent">
 
                                                 <Path
-                                                HorizontalAlignment="Right"
-                                                VerticalAlignment="Center"
-                                                Margin="0,0,12,0"
-                                                Fill="{DynamicResource PrimaryTextBrush}"
-                                                Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                                    HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center"
+                                                    Margin="0,0,12,0"
+                                                    Fill="{DynamicResource PrimaryTextBrush}"
+                                                    Data="M 0 0 L 4 4 L 8 0 Z"/>
 
                                             </Grid>
 
@@ -163,26 +165,26 @@
 
                         <!-- Dropdown -->
                         <Popup
-                        x:Name="PART_Popup"
-                        Placement="Bottom"
-                        AllowsTransparency="True"
-                        Focusable="False"
-                        IsOpen="{TemplateBinding IsDropDownOpen}"
-                        PopupAnimation="Fade">
+                            x:Name="PART_Popup"
+                            Placement="Bottom"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            PopupAnimation="Fade">
 
                             <Border
-                            Margin="0,3,0,0"
-                            MinWidth="{Binding ActualWidth,
-                                RelativeSource={RelativeSource TemplatedParent}}"
-                            MaxHeight="320"
-                            CornerRadius="5"
-                            Background="{DynamicResource ControlPopupBackgroundBrush}"
-                            BorderBrush="{DynamicResource ControlBorderBrush}"
-                            BorderThickness="1">
+                                Margin="0,3,0,0"
+                                MinWidth="{Binding ActualWidth,
+                                    RelativeSource={RelativeSource TemplatedParent}}"
+                                MaxHeight="320"
+                                CornerRadius="5"
+                                Background="{DynamicResource ControlPopupBackgroundBrush}"
+                                BorderBrush="{DynamicResource ControlBorderBrush}"
+                                BorderThickness="1">
 
                                 <ScrollViewer
-                                VerticalScrollBarVisibility="Auto"
-                                HorizontalScrollBarVisibility="Disabled">
+                                    VerticalScrollBarVisibility="Auto"
+                                    HorizontalScrollBarVisibility="Disabled">
 
                                     <ItemsPresenter/>
 
@@ -197,7 +199,7 @@
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsMouseOver"
-                             Value="True">
+                                 Value="True">
 
                             <Setter TargetName="MainBorder"
                                 Property="BorderBrush"
@@ -206,10 +208,10 @@
                         </Trigger>
 
                         <Trigger Property="IsEnabled"
-                             Value="False">
+                                 Value="False">
 
                             <Setter Property="Opacity"
-                                Value="0.5"/>
+                                    Value="0.5"/>
 
                         </Trigger>
 

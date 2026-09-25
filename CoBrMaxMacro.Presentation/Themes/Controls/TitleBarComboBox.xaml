@@ -6,25 +6,25 @@
     <!-- ====================================================== -->
 
     <Style x:Key="TitleBarComboBoxStyle"
-       TargetType="ComboBox">
+           TargetType="ComboBox">
 
         <Setter Property="Foreground"
-            Value="{DynamicResource PrimaryTextBrush}"/>
+                Value="{DynamicResource PrimaryTextBrush}"/>
 
         <Setter Property="Background"
-            Value="{DynamicResource ControlBackgroundBrush}"/>
+                Value="{DynamicResource ControlBackgroundBrush}"/>
 
         <Setter Property="BorderBrush"
-            Value="{DynamicResource ControlBorderBrush}"/>
+                Value="{DynamicResource ControlBorderBrush}"/>
 
         <Setter Property="BorderThickness"
-            Value="1"/>
+                Value="1"/>
 
         <Setter Property="FontSize"
-            Value="12"/>
+                Value="12"/>
 
         <Setter Property="Cursor"
-            Value="Hand"/>
+                Value="Hand"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -34,12 +34,12 @@
                     <Grid>
 
                         <ToggleButton
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Focusable="False"
-                        ClickMode="Press"
-                        IsChecked="{Binding IsDropDownOpen,
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Focusable="False"
+                            ClickMode="Press"
+                            IsChecked="{Binding IsDropDownOpen,
                                            RelativeSource={RelativeSource TemplatedParent},
                                            Mode=TwoWay}">
 
@@ -48,10 +48,10 @@
                                 <ControlTemplate TargetType="ToggleButton">
 
                                     <Border x:Name="Border"
-                                        Background="{TemplateBinding Background}"
-                                        BorderBrush="{TemplateBinding BorderBrush}"
-                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                        CornerRadius="8">
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="8">
 
                                         <Grid>
 
@@ -61,20 +61,20 @@
                                             </Grid.ColumnDefinitions>
 
                                             <TextBlock
-                                            Grid.Column="0"
-                                            Margin="10,0,0,0"
-                                            Text="Theme"
-                                            HorizontalAlignment="Left"
-                                            VerticalAlignment="Center"
-                                            Foreground="{DynamicResource PrimaryTextBrush}"/>
+                                                Grid.Column="0"
+                                                Margin="10,0,0,0"
+                                                Text="Theme"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Center"
+                                                Foreground="{DynamicResource PrimaryTextBrush}"/>
 
                                             <TextBlock
-                                            Grid.Column="1"
-                                            Text="▼"
-                                            FontSize="10"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Foreground="{DynamicResource PrimaryTextBrush}"/>
+                                                Grid.Column="1"
+                                                Text="▼"
+                                                FontSize="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Foreground="{DynamicResource PrimaryTextBrush}"/>
 
                                         </Grid>
 
@@ -83,11 +83,11 @@
                                     <ControlTemplate.Triggers>
 
                                         <Trigger Property="IsMouseOver"
-                                             Value="True">
+                                                 Value="True">
 
                                             <Setter TargetName="Border"
-                                                Property="Background"
-                                                Value="{DynamicResource ControlHoverBrush}"/>
+                                                    Property="Background"
+                                                    Value="{DynamicResource ControlHoverBrush}"/>
 
                                         </Trigger>
 
@@ -100,19 +100,19 @@
                         </ToggleButton>
 
                         <Popup
-                        x:Name="Popup"
-                        Placement="Bottom"
-                        IsOpen="{TemplateBinding IsDropDownOpen}"
-                        AllowsTransparency="True"
-                        Focusable="False"
-                        PopupAnimation="Fade">
+                            x:Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            PopupAnimation="Fade">
 
                             <Border
-                            Margin="0,4,0,0"
-                            Background="{DynamicResource ControlPopupBackgroundBrush}"
-                            BorderBrush="{DynamicResource ControlBorderBrush}"
-                            BorderThickness="1"
-                            CornerRadius="8">
+                                Margin="0,4,0,0"
+                                Background="{DynamicResource ControlPopupBackgroundBrush}"
+                                BorderBrush="{DynamicResource ControlBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="8">
 
                                 <ScrollViewer>
                                     <StackPanel IsItemsHost="True"/>
@@ -137,19 +137,19 @@
     <!-- ====================================================== -->
 
     <Style x:Key="TitleBarComboBoxItemStyle"
-       TargetType="ComboBoxItem">
+           TargetType="ComboBoxItem">
 
         <Setter Property="Foreground"
-            Value="{DynamicResource PrimaryTextBrush}"/>
+                Value="{DynamicResource PrimaryTextBrush}"/>
 
         <Setter Property="Background"
-            Value="Transparent"/>
+                Value="Transparent"/>
 
         <Setter Property="Padding"
-            Value="10,6"/>
+                Value="10,6"/>
 
         <Setter Property="HorizontalContentAlignment"
-            Value="Stretch"/>
+                Value="Stretch"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -157,34 +157,34 @@
                 <ControlTemplate TargetType="ComboBoxItem">
 
                     <Border x:Name="ItemBorder"
-                        Background="{TemplateBinding Background}"
-                        CornerRadius="6"
-                        Margin="4">
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="6"
+                            Margin="4">
 
                         <ContentPresenter
-                        Margin="4,0"
-                        VerticalAlignment="Center"
-                        TextElement.Foreground="{TemplateBinding Foreground}"/>
+                            Margin="4,0"
+                            VerticalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}"/>
 
                     </Border>
 
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsHighlighted"
-                             Value="True">
+                                 Value="True">
 
                             <Setter TargetName="ItemBorder"
-                                Property="Background"
-                                Value="{DynamicResource ControlHoverBrush}"/>
+                                    Property="Background"
+                                    Value="{DynamicResource ControlHoverBrush}"/>
 
                         </Trigger>
 
                         <Trigger Property="IsSelected"
-                             Value="True">
+                                 Value="True">
 
                             <Setter TargetName="ItemBorder"
-                                Property="Background"
-                                Value="{DynamicResource TitleBarHoverBrush}"/>
+                                    Property="Background"
+                                    Value="{DynamicResource TitleBarHoverBrush}"/>
 
                         </Trigger>
 
