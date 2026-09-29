@@ -46,4 +46,18 @@ public partial class CharacterSelectionView : UserControl
             })
             .ToList();
     }
+
+    private void CharacterClassSelector_SelectionChanged(
+        object sender,
+        SelectionChangedEventArgs e
+    )
+    {
+        if (CharacterClassSelector.SelectedItem is not CharacterClassItem selectedCharacterClass)
+            return;
+
+        System.Diagnostics.Debug.WriteLine(
+            $"Character class selected: {selectedCharacterClass.DisplayName} " +
+            $"({selectedCharacterClass.Value})"
+        );
+    }
 }

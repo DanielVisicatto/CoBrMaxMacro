@@ -31,6 +31,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Content Include="..\CoBrMaxMacro.Infrastructure\World\Spots\Data\spots.json">
+			<Link>World\Spots\Data\spots.json</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
 		<Resource Include="Assets\Backgrounds\main-background.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Resource>
