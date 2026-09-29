@@ -1,0 +1,11 @@
+﻿[
+  {
+    "id": "green-despair-troglo-01",
+    "name": "Troglos",
+    "mapId": "green-despair",
+    "x": 190,
+    "y": 195,
+    "radiusX": 25,
+    "radiusY": 5
+  }
+]

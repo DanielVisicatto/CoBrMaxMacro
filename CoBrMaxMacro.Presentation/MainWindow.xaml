@@ -6,6 +6,7 @@
         xmlns:controls="clr-namespace:CoBrMaxMacro.Presentation.Controls"
         xmlns:characterSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.Characters.Selection"
         xmlns:mapSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.World.Maps"
+        xmlns:spotSelection="clr-namespace:CoBrMaxMacro.Presentation.Controls.World.Spots"
         mc:Ignorable="d"
 
         Title="Cabal Max Macro"
@@ -95,6 +96,9 @@
                             <characterSelection:CharacterSelectionView />
 
                             <mapSelection:MapSelectionView
+                                Margin="0,16,0,0"/>
+
+                            <spotSelection:SpotSelectionView
                                 Margin="0,16,0,0"/>
 
                         </StackPanel>

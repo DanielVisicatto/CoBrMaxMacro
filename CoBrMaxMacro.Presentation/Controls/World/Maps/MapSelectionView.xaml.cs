@@ -47,5 +47,13 @@ public partial class MapSelectionView : UserControl
     {
         MapSelectionState.SelectedMap =
             MapSelector.SelectedItem as MapModel;
+
+        if (MapSelectionState.SelectedMap is null)
+            return;
+
+        System.Diagnostics.Debug.WriteLine(
+            $"Map selected: {MapSelectionState.SelectedMap.Name} " +
+            $"({MapSelectionState.SelectedMap.Id})"
+        );
     }
 }
