@@ -11,4 +11,8 @@ public sealed class SpotModel
     public int X { get; init; }
 
     public int Y { get; init; }
+
+    public int RadiusX { get; init; }
+
+    public int RadiusY { get; init; }
 }

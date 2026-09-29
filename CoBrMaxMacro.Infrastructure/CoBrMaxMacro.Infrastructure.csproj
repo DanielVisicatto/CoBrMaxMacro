@@ -17,9 +17,4 @@
 		</None>
 	</ItemGroup>
 
-	<ItemGroup>
-		<Folder Include="World\Spots\Data\" />
-		<Folder Include="World\Spots\Repositories\" />
-	</ItemGroup>
-
 </Project>
